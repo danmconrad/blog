@@ -35,7 +35,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            port: '9001'
         }
     },
 
@@ -43,7 +43,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
-        url: 'http://blog-local.backersphere.com',
+        url: 'http://blog-uat.backersphere.com',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
@@ -71,7 +71,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            port: '8001'
         },
         paths: {
             contentPath: path.join(__dirname, '/content/')
@@ -93,7 +93,7 @@ config = {
         },
         server: {
             host: '127.0.0.1',
-            port: '2368'
+            port: '2369'
         },
         logging: false
     },
