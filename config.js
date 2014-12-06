@@ -40,10 +40,49 @@ config = {
     },
 
     // ### Development **(default)**
-    development: {
+    uat: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
         url: 'http://blog-uat.backersphere.com',
+
+        // Example mail config
+        // Visit http://support.ghost.org/mail for instructions
+        // ```
+         mail: {
+             transport: 'SMTP',
+             options: {
+                 service: 'Mailgun',
+                 auth: {
+                     user: 'postmaster@sandbox3195907ee1ec4969a87ed59510d67093.mailgun.org', // mailgun username
+                     pass: '3861fbbc7b6336e8c7554b0ca7df1c3b'  // mailgun password
+                 }
+             }
+         },
+        // ```
+
+        database: {
+            client: 'sqlite3',
+            connection: {
+                filename: path.join(__dirname, '/content/data/ghost-dev.db')
+            },
+            debug: false
+        },
+        server: {
+            // Host to be passed to node's `net.Server#listen()`
+            host: '127.0.0.1',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+            port: '8001'
+        },
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
+        }
+    },
+
+    // ### Development **(default)**
+    development: {
+        // The url to use when providing links to the site, E.g. in RSS and email.
+        // Change this to your Ghost blogs published URL.
+        url: 'http://blog-local.backersphere.com',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
